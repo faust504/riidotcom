@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fahriii</title>
+    <link rel="icon" type="image/png" href="image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        'casual-bg': '#fafaf9',       // Warm Stone
+                        'casual-card': '#ffffff',     // Pure White
+                        'casual-text': '#44403c',     // Dark Warm Grey
+                        'casual-primary': '#f43f5e',  // Rose/Pink
+                        'casual-secondary': '#fb923c', // Orange
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+                        'glow': '0 0 15px rgba(244, 63, 94, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fafaf9;
+            /* Subtle Mesh Gradient Background */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(251, 146, 60, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(244, 63, 94, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Smooth, colorful scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e7e5e4; 
+            border-radius: 99px;
+            border: 2px solid #fafaf9;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f43f5e; 
+        }
+
+        /* Typography adjustments */
+        .prose h1, .prose h2, .prose h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #1c1917;
+        }
+        .prose strong {
+            color: #f43f5e;
+        }
+        
+        /* Floating Animation */
+        .float-img {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="font-sans text-casual-text min-h-screen flex flex-col items-center p-4 md:p-8">
+
+    <nav class="w-full max-w-xl bg-white/80 backdrop-blur-md border border-white shadow-soft rounded-full px-6 py-4 fixed top-4 z-50 flex justify-between items-center transition-all duration-300">
+        <a href="#" class="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-casual-primary to-casual-secondary bg-clip-text text-transparent">
+            Fahrii.
+        </a>
+        <div class="flex gap-6 text-sm font-medium text-stone-500">
+            <a href="#blog" class="hover:text-casual-primary transition-colors">Blog</a>
+            <a href="#about" class="hover:text-casual-primary transition-colors">Profil</a>
+            <a href="https://www.instagram.com/justdinxyt" class="hover:text-casual-primary transition-colors">Kontak</a>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-2xl mt-24 flex flex-col gap-10">
+
+        <header class="text-center py-10 relative">
+            <div class="inline-block mb-3 px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-bold tracking-wide uppercase">
+                Siswa Kelas 9A • SMPN 3 Surabaya
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-black text-stone-900 leading-tight mb-4">
+                M.
+                <span class="tracking-tight bg-gradient-to-r from-casual-primary to-casual-secondary bg-clip-text text-transparent">
+                    Fahri
+                </span>
+                Akbar
+            </h1>
+            <p class="text-lg text-stone-500 max-w-md mx-auto">
+                arek seng paling sangar
+            </p>
+        </header>
+
+        <section id="blog" class="bg-white rounded-3xl p-6 md:p-8 shadow-soft border border-stone-100 relative overflow-hidden group">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-casual-secondary opacity-10 rounded-full group-hover:scale-110 transition-transform duration-700"></div>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center text-casual-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-display font-bold text-stone-800">Pengalaman SPEGA</h2>
+                    <p class="text-xs font-bold text-stone-400 uppercase tracking-wider">12 Des 2025</p>
+                </div>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow-lg mb-8 transform transition-all hover:scale-[1.01]">
+                <div class="aspect-video w-full bg-stone-100">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/9IufqlVL0FY?si=QIyyTFM1sJZedOFy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="blog-content" class="prose prose-stone prose-lg max-w-none prose-p:text-stone-600 prose-headings:text-stone-800">
+                </div>
+        </section>
+
+        <section id="about" class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            
+            <div class="md:col-span-2 bg-white rounded-3xl p-4 shadow-soft border border-stone-100 flex flex-col items-center justify-center text-center">
+                <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 relative">
+                    <img src="image.png" alt="Fahri" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="font-display font-bold text-xl">M. Fahri Akbar</h3>
+                <p class="text-sm text-stone-400">Surabaya, Indonesia</p>
+                
+                <div class="mt-4 flex gap-2">
+                    <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-lg text-xs font-bold">9A</span>
+                    <span class="bg-orange-50 text-orange-600 px-3 py-1 rounded-lg text-xs font-bold">Absen. 21</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 bg-gradient-to-br from-casual-text to-casual-text rounded-3xl p-8 shadow-soft text-white flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                
+                <h2 class="text-3xl font-display font-bold mb-4 relative z-10 text-white">Tentangku</h2>
+                <div id="about-content" class="prose prose-invert max-w-none relative z-10 text-white">
+                    </div>
+            </div>
+
+        </section>
+
+        <footer class="mt-10 mb-20 text-center">
+            <p class="text-stone-400 text-sm">
+                wassalamualaikum warahmatullahi wabarakatuh<br>
+                <span class="opacity-50 text-xs">salam e wong kalcer</span>
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- CONTENT DATA ---
+        // Using the exact text you provided, just wrapped in Markdown
+        
+        const blogMarkdown = `
+Sekolah wong **kalcer**. Buktinya **aku** murid spega dan aku **kalcer**.
+
+mk momen ketiak when ketika tni korut selatan dan tni amerika nobar bareng nenton drakor jepang, di monas nasional sama cewe sadboy, finally akhirnya gw laper pengen nasgor goreng sama ayam chicken dan yap gw otw dalam perjalanan untuk beli ayam chicken dan esteh hangat trs gw mabar sendiri sambil dengerin my favorite musik gw trs gw mode on aktif dinyalakan.
+
+Gw mabar sendiri bersama dua trio, but tapi nasgor goreng sama mie ayam selalu always tapi yg ytta aja thanks you banget all semuanya yg telah repost ulang video vt tiktok gw semoga next time selanjutnya bisa lebih better lagi biar makin inspiratif dan more edukatif.
+
+### 🍊 Yang kusuka:
+* Es teh kantin
+* Uang
+* Jamkos
+`;
+
+        const aboutMarkdown = `
+Namaku **<span class="text-orange-300">Muhammad Fahri Akbar</span>** biasa dipanggil **<span class="text-orange-300">Fahri</span>**.
+
+### <span class="text-orange-200">✨ Quotes of the day:</span>
+
+> "Musim jangan dicari, kalau bertemu jangan lari."
+`;
+
+        // Render Markdown
+        document.getElementById('blog-content').innerHTML = marked.parse(blogMarkdown);
+        document.getElementById('about-content').innerHTML = marked.parse(aboutMarkdown);
+
+    </script>
+</body>
+</html>
